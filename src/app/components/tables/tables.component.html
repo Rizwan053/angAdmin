@@ -1,0 +1,32 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="header">
+            <a class="btn btn-success pull-right" routerLink="/tables/add" >{{ messages.add }}</a>
+            <h4 class="title">{{ messages.tables }}</h4>
+            <p class="category">{{ messages.tables_desc }}</p>
+          </div>
+          <div class="content table-responsive table-full-width">
+            <table class="table table-striped" id="tables-Table">
+              <thead>
+                <tr>
+                    <th>{{ messages.id }}</th>
+                    <th>{{ messages.title }}</th>
+                    <th>{{ messages.body }}</th>
+                </tr>
+
+              </thead>
+              <tbody>
+                <tr *ngFor="let table of tables" >
+                  <td>{{ table.id }}</td>
+                  <td>{{ table.title.substr(0,50) }}...</td>
+                  <td>{{ table.body.substr(0,100) }}...</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+      </div>

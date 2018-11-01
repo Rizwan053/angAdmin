@@ -1,0 +1,36 @@
+<div class="sidebar" data-background-color="white" data-active-color="danger">
+
+  <!--
+Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
+Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
+-->
+
+  <div class="sidebar-wrapper">
+    <div class="logo">
+      <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="simple-text">
+        {{ messages.adminPanel }}
+      </a>
+    </div>
+
+    <ul class="nav">
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a routerLink="/">
+          <i class="ti-panel"></i>
+          <p>{{ messages.dashboard }}</p>
+        </a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/tables">
+          <i class="ti-view-list-alt"></i>
+          <p>{{ messages.tables }}</p>
+        </a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/gallery">
+          <i class="ti-view-list-alt"></i>
+          <p>{{ messages.gallery }}</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

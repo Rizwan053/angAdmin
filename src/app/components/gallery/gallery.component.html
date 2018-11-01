@@ -1,0 +1,26 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="header">
+            <h4 class="title">{{ messages.gallery }}</h4>
+            <p class="category">{{ messages.gallery_desc }}</p>
+          </div>
+          <div class="content table-responsive table-full-width">
+
+            <div class="col-sm-4" *ngFor="let gallery of galleries" >
+              <div class="panel panel-default">
+                <div class="panel-thumbnail"><img src="{{ gallery.url }}" class="img-responsive"></div>
+                <div class="panel-body">
+                  <p class="lead">{{ gallery.title }}</p>
+                  <p>{{ gallery.id }}</p>
+                </div>
+              </div>
+            </div>
+            <!--/col-->
+
+
+          </div>
+        </div>
+      </div>
